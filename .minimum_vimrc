@@ -1,0 +1,46 @@
+set ai
+set cursorline
+set tabstop=4
+set shiftwidth=4
+set clipboard=unnamedplus
+set history=100
+set mouse=nvi
+set incsearch
+set ruler
+set backspace=2
+set rnu
+set ignorecase
+syntax on
+set tags=./tags
+filetype indent on
+au FileType gitcommit setlocal tw=72
+set background=dark
+colorscheme retrobox
+
+set laststatus=2
+set statusline=%f\ %y\ %m\ %r\%=LINE:%l/%L\ COL:%c\ %P
+
+" Leader setting
+let mapleader = " "
+nnoremap <Leader>w :w!<CR>
+nnoremap <Leader>q :q!<CR>
+" Short cut for exit terminal in vim
+tnoremap <leader><Esc> <C-\><C-n>
+" Replace the word with yanked word
+nnoremap <leader>p "_diwP
+" Reload
+nnoremap <leader>r :e!<CR>
+" Vertical split
+nnoremap <leader>v :vsp
+" Split
+nnoremap <leader>s :split
+nnoremap <leader>e :tabnew<CR>:E<CR>
+
+" Tab
+nnoremap <leader>n :tabnew<CR>:e 
+nnoremap <leader>k :tabnext<CR>
+nnoremap <leader>j :tabprevious<CR>
+" Open full size terminal in new Tab
+nnoremap <leader>t :tabnew \| terminal<CR><C-\><C-n><C-w>w:q<CR>i
+nnoremap <leader>m :tabm
+
