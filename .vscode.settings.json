@@ -1,0 +1,53 @@
+{
+    "editor.lineNumbers": "relative",
+    "vim.useSystemClipboard": true,
+    "vim.leader": "<Space>",
+    "vim.hlsearch": true,
+    "vim.normalModeKeyBindingsNonRecursive": [
+    // NAVIGATION
+    // switch between tabs
+    { "before": ["leader", "j"], "commands": [":tabp"] },
+    { "before": ["leader", "k"], "commands": [":tabn"] },
+
+    // splits
+    { "before": ["leader", "v"], "after": [":", "v", "s", "p", "l", "i", "t", "<space>"] },
+    { "before": ["leader", "s"], "after": [":", "s", "p", "l", "i", "t", "<space>"] },
+
+    { "before": ["leader", "w"], "commands": [":w!"] },
+    { "before": ["leader", "q"], "commands": [":q!"] },
+    { "before": ["leader", "x"], "commands": [":x!"] },
+
+    // Go to Changes
+    {
+      "before": ["]", "c"],
+      "commands": ["workbench.action.editor.nextChange"]
+    },
+    {
+      "before": ["[", "c"],
+      "commands": ["workbench.action.editor.previousChange"]
+    },
+
+    // Go to Markers
+    {
+      "before": ["[", "d"],
+      "commands": ["editor.action.marker.prev"]
+    },
+    {
+      "before": ["]", "d"],
+      "commands": ["editor.action.marker.next"]
+    },
+    ],
+    "editor.wordWrap": "on",
+    "update.mode": "none",
+    "update.showReleaseNotes": false,
+    "extensions.autoUpdate": false,
+    "extensions.autoCheckUpdates": false,
+    "workbench.startupEditor": "none",
+    "vim.commandLineModeKeyBindings": [
+    
+    ],
+    "vim.commandLineModeKeyBindingsNonRecursive": [],
+    "editor.minimap.enabled": false,
+    "asciidoc.extensions.enableKroki": true,
+    "window.zoomLevel": 1
+}
