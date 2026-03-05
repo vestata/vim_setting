@@ -8,7 +8,6 @@ set mouse=nvi
 set incsearch
 set ruler
 set backspace=2
-set rnu
 set ignorecase
 syntax on
 set tags=./tags
@@ -28,6 +27,16 @@ nnoremap <Leader>q :q!<CR>
 tnoremap <leader><Esc> <C-\><C-n>
 " Replace the word with yanked word
 nnoremap <leader>p "_diwP
+" Line Number
+function! ToggleLineNumbers()
+	if (&number == 1)
+		set number!
+		set relativenumber!
+	else
+		set number
+		set relativenumber
+	endif
+endfunction
 " Reload
 nnoremap <leader>r :e!<CR>
 " Vertical split
